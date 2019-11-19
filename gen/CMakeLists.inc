@@ -6,6 +6,11 @@ include(${CSiBE_GEN_DIR}/CSiBE_flags.inc)
 include(${CSiBE_GEN_DIR}/GCC.inc)
 include(${CSiBE_GEN_DIR}/Clang.inc)
 
+if ((PROJECT_NAME STREQUAL "dhrystone"))
+  set(DHRY_FLAGS "-DTIME -DNOENUM -fno-builtin-printf -fno-common -falign-functions=4")
+  set(CMAKE_C_FLAGS "${DHRY_FLAGS}" CACHE STRING "" FORCE)
+endif ()
+
 set (SIZE_RESULT "${PROJECT_BINARY_DIR}/result.csv")
 
 if("${CMAKE_VERSION}" VERSION_GREATER 3.4.0)

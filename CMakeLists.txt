@@ -20,6 +20,8 @@ if (NOT DEFINED ENV{CSiBE_SUBPROJECTS})
   # Add bzip2 project
   list (APPEND SUBPROJECTS "bzip2-1.0.6")
 
+  list (APPEND SUBPROJECTS "dhrystone")
+
   # Add CMSIS project subprojects
   # 'Generic' CMAKE_SYSTEM_NAME means 'an embedded system without OS' here.
   if ((CMAKE_SYSTEM_NAME STREQUAL "Generic"))
