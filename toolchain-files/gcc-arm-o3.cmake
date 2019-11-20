@@ -9,6 +9,6 @@ set(CMAKE_CXX_COMPILER arm-linux-gnueabihf-g++)
 
 set(SYSROOTPATH /home/qjivy/work/toolchainbin/arm-gcc-linaro/arm/sysroot-glibc-linaro-2.25-2019.02-arm-linux-gnueabihf)
 
-set(Cortex_M0_FLAGS "-O3 -mthumb --sysroot=${SYSROOTPATH} -I${SYSROOTPATH}usr/include/")
+set(Cortex_M0_FLAGS "-O3 -marm --sysroot=${SYSROOTPATH} -I${SYSROOTPATH}usr/include/")
 set(CMAKE_C_FLAGS "${Cortex_M0_FLAGS}" CACHE STRING "" FORCE)
 set(CMAKE_CXX_FLAGS "${Cortex_M0_FLAGS}" CACHE STRING "" FORCE)
