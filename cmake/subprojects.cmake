@@ -29,8 +29,8 @@ function(adopt_subprojects)
                 CSiBE-v2.1.1/compiler
                 CSiBE-v2.1.1/flex-2.5.31
                 CSiBE-v2.1.1/jikespg-1.3
-                CSiBE-v2.1.1/jpeg-6b
-                CSiBE-v2.1.1/libmspack
+#                CSiBE-v2.1.1/jpeg-6b
+#                CSiBE-v2.1.1/libmspack
                 CSiBE-v2.1.1/libpng-1.2.5
                 CSiBE-v2.1.1/lwip-0.5.3.preproc
                 CSiBE-v2.1.1/mpeg2dec-0.3.1
