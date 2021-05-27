@@ -6,6 +6,17 @@ include(${CSiBE_GEN_DIR}/CSiBE_flags.inc)
 include(${CSiBE_GEN_DIR}/GCC.inc)
 include(${CSiBE_GEN_DIR}/Clang.inc)
 
+if ((PROJECT_NAME STREQUAL "dhrystone"))
+  set(DHRY_FLAGS "-DTIME -DNOENUM -fno-builtin-printf -fno-common -falign-functions=4")
+  set(CMAKE_C_FLAGS "${DHRY_FLAGS} ${CMAKE_C_FLAGS}" CACHE STRING "" FORCE)
+endif()
+
+if ((PROJECT_NAME STREQUAL "coremark"))
+  set(COREMARK_FLAGS "-DPERFORMANCE_RUN=1 -DITERATIONS=100 -DFLAGS_STR=0 -I${PROJECT_SOURCE_DIR} -I${PROJECT_SOURCE_DIR}/linux/")
+  set(CMAKE_C_FLAGS "${COREMARK_FLAGS} ${CMAKE_C_FLAGS}" CACHE STRING "" FORCE)
+endif ()
+
+
 set (SIZE_RESULT "${PROJECT_BINARY_DIR}/result.csv")
 
 if("${CMAKE_VERSION}" VERSION_GREATER 3.4.0)

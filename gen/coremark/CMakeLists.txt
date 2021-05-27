@@ -1,0 +1,9 @@
+cmake_minimum_required(VERSION 2.8.12 FATAL_ERROR)
+
+project (coremark)
+
+
+set (PROJECT_SOURCE_DIR ${CSiBE_SRC_DIR}/${PROJECT_NAME})
+set (PROJECT_INCLUDE_DIR ${PROJECT_SOURCE_DIR})
+
+include(${CSiBE_GEN_DIR}/CMakeLists.inc)
